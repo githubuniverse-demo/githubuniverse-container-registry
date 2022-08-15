@@ -1,0 +1,11 @@
+name: Github Container Registry
+on:
+  push: 
+    branches: [main]
+
+jobs:
+
+  Registry:
+    uses: githubuniverse-demo/githubuniverse-reusable-workflows/.github/workflows/registry.yml@main
+    secrets:
+      PAT_GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
